@@ -1,0 +1,16 @@
+import time
+from selenium import webdriver
+driver =webdriver.Chrome()
+time.sleep(2)
+driver.maximize_window()
+driver.get('https://study.zhihuishu.com/learningNew/videoList?recruitAndCourseId=4b5c5a5f4052415841435d5951')
+driver.implicitly_wait(8)
+driver.find_element_by_xpath("//*[@id='lUsername']").send_keys("17376571331")
+time.sleep(1)
+driver.find_element_by_xpath("//*[@id='lPassword']").send_keys("makesense")
+time.sleep(1)
+driver.find_element_by_xpath("//*[@id='f_sign_up']/div/span").click()
+time.sleep(5)
+driver.find_element_by_xpath("//*[@class='popbtn_yes']").click()
+time.sleep(2)
+driver.find_element_by_xpath("//*[@class='popboxes_close tmui_txt_hidd']").click()

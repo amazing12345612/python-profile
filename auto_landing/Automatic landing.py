@@ -25,6 +25,8 @@ def driver_land(driver,username,password):
 #下载单词本里的单词
 def download():
     i = 0
+    #number = driver.find_element_by_xpath("//*[@id='wordfoot']/div[2]/strong[2]").text
+    #print(number)
     for i in range(1,16):
         a = driver.find_element_by_xpath("//*[@id='wordlist']/table/tbody/tr[%d]"%i).text #单词在worlist中通过text爬取
         a = a.replace('\n','')#去除空格
@@ -44,8 +46,10 @@ def add_word(driver):
         i += 1
 if __name__=='__main__':
     j = 1
-    username = input('please enter your user name')
-    password = input('pleease enter your password')
+    username = "1293156042@qq.com"
+    password = "makesense"
+   # username = input('please enter your user name')
+    #password = input('pleease enter your password')
     driver = webdriver.Chrome()
     driver.maximize_window()
     url = 'http://account.youdao.com/login?service=dict&back_url=http://dict.youdao.com/wordbook/wordlist%3Fkeyfrom%3Dlogin_from_dict2.index'
@@ -68,13 +72,11 @@ if __name__=='__main__':
             driver.find_element_by_xpath("//*[@id='pagejumpform']/input").send_keys(j)#找到页码输入部分
             time.sleep(1)
             driver.find_element_by_xpath("//*[@id='pagejumpform']/button").click()
-            download()
             time.sleep(2)
+            download()
+            if j == 3:
+                print('down successful')
             j = j + 1
+
     else:
         print('thank you')
-
-
-
-
-

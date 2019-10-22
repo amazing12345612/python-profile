@@ -1,8 +1,8 @@
 import requests
 import json
 def openfile():
-    with open(r'C:\Users\12931\Desktop\_citycode.json', 'r', encoding='UTF-8') as f:
-        data = json.load(f)
+    with open('_citycode.json', 'r', encoding='UTF-8') as f:
+        data = json.load(f)#将json对象转成python对象
     return data
 def getCode(data,city_name):
     result = [item['city_code'] for item in data if item['city_name'] == str(city_name)]

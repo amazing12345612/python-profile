@@ -1,1 +1,1 @@
-file,view,navigate,code,refactor,run,tools
+window,help,project,automatic,landing,abroad,chinese,japanese
