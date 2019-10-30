@@ -14,3 +14,7 @@ time.sleep(5)
 driver.find_element_by_xpath("//*[@class='popbtn_yes']").click()
 time.sleep(2)
 driver.find_element_by_xpath("//*[@class='popboxes_close tmui_txt_hidd']").click()
+time.sleep(2)
+list = []
+driver.find_element_by_xpath("//*[@watchstate='0']//text()")
+#driver.find_element_by_xpath("//*[@id='video-222457']/div[1]").click()

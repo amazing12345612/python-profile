@@ -61,5 +61,5 @@ def getImg(dataList, localPath):
 
 
 if __name__ == '__main__':
-    dataList = getManyPages('加藤惠', 1)  # 参数1:关键字，参数2:要下载的页数
+    dataList = getManyPages('加藤惠', 10)  # 参数1:关键字，参数2:要下载的页数
     getImg(dataList, 'E:\python-project\jpg\jpg\jpg')  # 参数2:指定保存的路径

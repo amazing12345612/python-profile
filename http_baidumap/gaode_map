@@ -1,0 +1,11 @@
+
+import requests
+import json
+
+#url = 'https://restapi.amap.com/v3/geocode/regeo'
+url = 'https://restapi.amap.com/v3/geocode/geo'
+parameters = {'address':'杭州电子科技大学','key':'4a1f52933aa621ac731ca7975a17b21c'}
+res = requests.get(url,parameters)
+json_data = json.loads(res.text)
+
+print(json_data)

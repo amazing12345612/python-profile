@@ -18,3 +18,5 @@ def getlnglat(address):
    return lat,lng   # 纬度 latitude   ，   经度 longitude  # ，
 if __name__=='__main__':
     address = '北京'
+    a,b = getlnglat(address)
+    print(a,b)
