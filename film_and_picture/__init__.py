@@ -42,7 +42,7 @@ def crow(type):
         j = i/25+1
         text = get_text(i)
         print('正在爬取第%d页\n'%j)
-        data = get_message(text)
+        data = get_message(text)    
         down_land(data,type)
 def get_picture(html):
     localPath = 'E:/python-project/text/jpg/'
@@ -51,7 +51,7 @@ def get_picture(html):
     image_name = html.xpath('//div[@class="hd"]/a/span[1]/text()')#图片名称
     return picture,image_name
 def downland_picture(i,picture,image_name):
-    localPath = 'E:/python-project/text/jpg/'
+    localPath = 'E:/python-project/film_and_picture/jpg2/'
     x = 0
     for url in picture:
         headers = {
