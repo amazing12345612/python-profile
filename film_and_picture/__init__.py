@@ -37,6 +37,8 @@ def down_land(data,type):
             writer = csv.writer(f)
             for item in data:
                 writer.writerow(item)
+    else:
+        print('can not find the type what you will downland')
 def crow(type):
     for i in range(0,250,25):
         j = i/25+1
